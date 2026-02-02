@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <title>Love Forever</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* --- Base page --- */
+  
     body {
       background: #000;
       height: 100vh;
@@ -14,7 +15,7 @@
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     }
 
-    /* --- Quick links (translated) --- */
+  
     .quick-link {
       position: fixed;
       right: 10px;
@@ -31,18 +32,17 @@
       font-size: 13px;
       user-select: none;
     }
-    .quick-link:nth-of-type(1) { top: 10%; }  /* Create */
-    .quick-link:nth-of-type(2) { top: 4%;  z-index: 998; }  /* More */
-    .quick-link:nth-of-type(3) { top: 16%; z-index: 997; }  /* Source Code */
-    .quick-link:nth-of-type(4) { top: 22%; z-index: 996; }  /* Gift */
+    .quick-link:nth-of-type(1) { top: 10%; }  
+    .quick-link:nth-of-type(2) { top: 4%;  z-index: 998; } 
+    .quick-link:nth-of-type(3) { top: 16%; z-index: 997; } 
+    .quick-link:nth-of-type(4) { top: 22%; z-index: 996; } 
 
-    /* --- Love words --- */
     #ui .love {
       position: absolute;
       top: 50%;
       left: 50%;
       margin: -225px 0 0 -225px;
-      /* per-item delay via CSS variable --i (1..N) */
+     
       --i: 1;
     }
     #ui .love:last-child .love_word {
@@ -50,7 +50,7 @@
       font-size: 2rem;
       text-shadow: 0 0 10px #ea80b0;
     }
-    /* Make the last item match the others */
+  
 #ui .love:last-child .love_word {
   color: #ea80b0;
   font-size: 1.4rem;
@@ -74,7 +74,7 @@
       animation-delay: calc(var(--i) * -300ms);
     }
 
-    /* --- Animations (unchanged) --- */
+   
     @keyframes horizontal {
       from { transform: translateX(0px); }
       to   { transform: translateX(450px); }
@@ -105,17 +105,12 @@
   </style>
 </head>
 <body>
-  <!-- Translated quick links (you can keep or remove the URLs) -->
-  <a href="https://mp.weixin.qq.com/s/oxLqXBcLCT8ij67DjkW2kw" class="quick-link" title="Create">Create</a>
-  <a href="https://shop1619956412.v.weidian.com/?userid=1619956412&spider_token=2720" class="quick-link" title="More">More</a>
-  <a href="https://pan.quark.cn/s/3344d23e48a8" class="quick-link" title="Source Code">Code</a>
-  <a href="https://shop1619956412.v.weidian.com/?userid=1619956412&spider_token=2720" class="quick-link" title="Gift">Gift</a>
-
+   
   <div id="ui"></div>
 
   <script>
-    // Create N floating “I love you” items (was multilingual; now all English)
-    const N = 100;     // adjust if you want fewer/more
+    
+    const N = 100;     
     const ui = document.getElementById('ui');
 
     for (let i = 1; i <= N; i++) {
@@ -131,7 +126,7 @@
 
       const word = document.createElement('div');
       word.className = 'love_word';
-      word.textContent = 'I love you';
+      word.textContent = 'I love you Roxsi';
 
       v.appendChild(word);
       h.appendChild(v);
